@@ -1,0 +1,22 @@
+body {
+    background-image: url(pic3.jpg);
+    background-size: cover;
+    background-repeat : no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    
+    
+}
+.titles {
+    margin-top:100px;
+    width:300px;
+    height: 200px;
+    color: white;
+}
+.options {
+    color: white;
+    width:300px;
+    height: 200px;
+}
