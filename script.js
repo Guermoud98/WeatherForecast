@@ -7,6 +7,7 @@
     console.error('Fetch error:', error);
   });
   */
+ var selectElement = document.getElementById("mySelect");
  fetch('cities.json')
  .then(response => response.json())
  .then(data => 
@@ -21,6 +22,10 @@
       var cities = data[key]
       for(var i = 0; i < 2; i++ ) {
         console.log("key: ",cities[i]);
+        var option = document.createElement('option');
+        option.value = cities[i].name;
+        option.text = cities[i].name + ", " + key;
+        selectElement.appendChild(option);
       }
     }
   }
