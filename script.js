@@ -7,4 +7,22 @@
     console.error('Fetch error:', error);
   });
   */
- 
+ fetch('cities.json')
+ .then(response => response.json())
+ .then(data => 
+  {
+    console.log(data)
+    var numOfKeys = Object.keys(data).length;
+    console.log(numOfKeys)
+    for (var key in data) {
+      /*console.log("key: ",key);
+        console.log("values: ",data[key]);
+      */
+      var cities = data[key]
+      for(var i = 0; i < 2; i++ ) {
+        console.log("key: ",cities[i]);
+      }
+    }
+  }
+  )
+  .catch(error => console.error('Fetch error:', error));
