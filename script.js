@@ -28,10 +28,7 @@ function citiesLonLat(longitude, latitude) {
 
         .then(response => response.json())
         .then(data => {
-            console.log("before");
             console.log(data); // Process the parsed JSON data
-            console.log("after");
-
         })
         .catch(error => {
             console.error('Fetch error:', error);
@@ -58,3 +55,6 @@ selectElement.addEventListener('change', function () {
     }
 
 })
+
+
+
