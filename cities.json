@@ -314,13 +314,13 @@
   "Poland": [
     {
       "name": "Warsaw",
-      "latitude": 52.2297,
-      "longitude": 21.0122
+      "latitude": 52.229,
+      "longitude": 21.012
     },
     {
       "name": "Krakow",
-      "latitude": 50.0647,
-      "longitude": 19.9450
+      "latitude": 50.065,
+      "longitude": 19.945
     }
   ]
 }
