@@ -42,7 +42,49 @@ function citiesLonLat(longitude, latitude) {
                 max[i].textContent += dataseries.temp2m.max;
                 min[i].textContent += dataseries.temp2m.min;
                 date[i].textContent = dataseries.date;
-                
+                //img
+                if(dataseries.weather === "clear" ) {
+                    img[i].src = "clear.png"
+                }
+                if(dataseries.weather === "cloudy" ) {
+                    img[i].src = "cloudy.png"
+                }
+                if(dataseries.weather === "fog" ) {
+                    img[i].src = "fog.png"
+                }
+                if(dataseries.weather === "ishower" ) {
+                    img[i].src = "ishower.png"
+                }
+                if(dataseries.weather === "lightrain" ) {
+                    img[i].src = "lightrain.png"
+                }
+                if(dataseries.weather === "lightsnow" ) {
+                    img[i].src = "lightsnow.png"
+                }
+                if(dataseries.weather === "mcloudy" ) {
+                    img[i].src = "mcloudy.png"
+                }
+                if(dataseries.weather === "oshower" ) {
+                    img[i].src = "oshower.png"
+                }
+                if(dataseries.weather === "pcloudy" ) {
+                    img[i].src = "pcloudy.png"
+                }
+                if(dataseries.weather === "rain" ) {
+                    img[i].src = "rain.png"
+                }
+                if(dataseries.weather === "rainsnow" ) {
+                    img[i].src = "rainsnow.png"
+                }
+                if(dataseries.weather === "snow" ) {
+                    img[i].src = "snow.png"
+                }
+                if(dataseries.weather === "tsrain" ) {
+                    img[i].src = "tsrain.png"
+                }
+                if(dataseries.weather === "tstorm" ) {
+                    img[i].src = "tstorm.png"
+                }
 
             }
 
