@@ -39,9 +39,17 @@ function citiesLonLat(longitude, latitude) {
             for (var i = 0; i < data.dataseries.length; i++) {
                 var dataseries = data.dataseries[i];
                 weather[i].textContent = dataseries.weather;
-                max[i].textContent += dataseries.temp2m.max;
-                min[i].textContent += dataseries.temp2m.min;
-                date[i].textContent = dataseries.date;
+                max[i].textContent = "H: " + dataseries.temp2m.max;
+                min[i].textContent = "L: " + dataseries.temp2m.min;
+                //date
+                var dateValue = readableDate(dataseries.date);
+                var dateObject = new Date(dateValue);
+                var d = dateObject.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+                //console.log(dateObject);
+                //.log(typeof(d));
+                date[i].textContent = d;
+                
+                //console.log(typeof(dataseries.date));
                 //img
                 if(dataseries.weather === "clear" ) {
                     img[i].src = "clear.png"
@@ -115,3 +123,12 @@ selectElement.addEventListener('change', function () {
     }
 
 })
+
+function readableDate(dateNumber) {
+    var d = dateNumber.toString();
+    var year = d.substring(0,4);
+    var month = d.substring(4,6);
+    var day = d.substring(6,8);
+    var date = year + "-" + month + "-" + day; 
+    return date;
+}
