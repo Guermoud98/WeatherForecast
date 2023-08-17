@@ -32,7 +32,7 @@ function retrievingCities() {
 }
 
 function citiesLonLat(longitude, latitude) {
-    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
+    fetch(`https://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
 
         .then(response => response.json())
         .then(data => {
@@ -90,7 +90,7 @@ function citiesLonLat(longitude, latitude) {
                 if(dataseries.weather === "snow" ) {
                     img[i].src = "snow.png"
                 }
-                if(dataseries.weather === "tsrain" ) {
+                if(dataseries.weather === "ts" ) {
                     img[i].src = "tsrain.png"
                 }
                 if(dataseries.weather === "tstorm" ) {
@@ -101,6 +101,7 @@ function citiesLonLat(longitude, latitude) {
             parent.style.display = "block";
             parent.style.display = "flex";
             parent.style.justifyContent = "center";
+            
         })
         .catch(error => {
             console.error('Fetch error:', error);
