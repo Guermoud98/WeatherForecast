@@ -11,6 +11,7 @@ var img = document.querySelectorAll(".img");
 var weather = document.querySelectorAll(".weather");
 var max = document.querySelectorAll(".max");
 var min = document.querySelectorAll(".min");
+var loading = document.querySelector(".loading");
 
 function retrievingCities() {
     var j = 0;
@@ -36,11 +37,13 @@ function citiesLonLat(longitude, latitude) {
         .then(response => response.json())
         .then(data => {
             console.log(data); // Process the parsed JSON data
+            loading.style.display = "none";
             for (var i = 0; i < data.dataseries.length; i++) {
                 var dataseries = data.dataseries[i];
+                
                 weather[i].textContent = dataseries.weather;
-                max[i].textContent = "H: " + dataseries.temp2m.max;
-                min[i].textContent = "L: " + dataseries.temp2m.min;
+                max[i].textContent = "H: " + dataseries.temp2m.max + "C°";
+                min[i].textContent = "L: " + dataseries.temp2m.min + "C°";
                 //date
                 var dateValue = readableDate(dataseries.date);
                 var dateObject = new Date(dateValue);
@@ -93,9 +96,11 @@ function citiesLonLat(longitude, latitude) {
                 if(dataseries.weather === "tstorm" ) {
                     img[i].src = "tstorm.png"
                 }
-
+               
             }
-
+            parent.style.display = "block";
+            parent.style.display = "flex";
+            parent.style.justifyContent = "center";
         })
         .catch(error => {
             console.error('Fetch error:', error);
@@ -109,6 +114,7 @@ console.log(citiesData);
 
 
 selectElement.addEventListener('change', function () {
+    loading.style.display = "block";
     var selectedValue = selectElement.value;
     console.log('Selected option value:', selectedValue);
     for (var i = 0; i < citiesData.length; i++) {

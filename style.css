@@ -6,17 +6,41 @@ body {
     height: 100vh;
     margin:0;
     padding:0;
+    background-attachment: fixed;
     
     
 }
+
 .titles {
-    margin-top:100px;
-    width:300px;
+    margin-top:10px;
     height: 200px;
     color: white;
 }
 .options {
     color: white;
-    width:300px;
     height: 200px;
+}
+fieldset {
+    margin: -40px;
+}
+#container {
+    display: none;
+    margin: -100px;
+}
+.header {
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    margin: 100px;
+    text-shadow: 0.125pc 0.125pc 0.625pc black;
+}
+.card-text {
+    text-align: center;
+    font-weight: bold;
+}
+.loading {
+    color : white;
+    text-align: center;
+    display: none;
 }

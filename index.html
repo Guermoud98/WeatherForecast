@@ -10,22 +10,25 @@
     <title>EuroCast</title>
 </head>
 <body>
-    <div class="titles">
-        <h1>EuroCast</h1>
-        <h2>European Weather Forecast</h2>
-        <h3>Powered by <a href="http://www.7timer.info/doc.php?lang=en#civil">7Timer</a></h3>  
-    </div>
-    <div class="options">
-        <fieldset>
-            <select id="mySelect">
-                <option value="" disabled selected>-- Select a city --</option>
+    <div class="header ">
+       <div class="titles ">
+         <h1 class="text-center">EuroCast</h1>
+         <h2>European Weather Forecast</h2>
+         <h3>Powered by <a href="http://www.7timer.info/doc.php?lang=en#civil">7Timer</a></h3>  
+       </div>
+       <div class="options">
+            <fieldset>
+               <select id="mySelect">
+                  <option value="" disabled selected>-- Select a city --</option>
              
-            </select>
-        </fieldset>
+               </select>
+            </fieldset>
+       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 g-7" id="container">
+    <p class="loading"> Loading...</p>
+    <div class="row row-cols-1 row-cols-md-2 g-7  " id="container">
         
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2 " style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -37,7 +40,7 @@
           
         </div>
         
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2" style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -48,7 +51,7 @@
             </div>
         </div>
 
-        <div class="card child" style="width:10rem;">
+        <div class="card child m-2" style="width:10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -59,7 +62,7 @@
             </div>
         </div>
 
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2" style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -70,7 +73,7 @@
             </div>
         </div>
 
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2" style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -81,7 +84,7 @@
             </div>
         </div>
 
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2" style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -92,7 +95,7 @@
             </div>
         </div>
 
-        <div class="card child" style="width: 10rem;">
+        <div class="card child m-2 " style="width: 10rem;">
             <h3 class="card-title date"></h3>
             <div class="card-body">
               <img src="" class="card-img-top img" alt="...">
@@ -102,11 +105,10 @@
              
             </div>
         </div>
-       
-        
-        
-        
-
+    </div>
+    
+    <div class="footer">
+        <code class="copyright-text">© Copyright 2023 EuroCast</code>
     </div>
     
    
