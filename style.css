@@ -5,7 +5,7 @@ body {
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
-    overflow: hidden; /* Hide scrollbars */
+  
     
 }
 
@@ -33,14 +33,15 @@ fieldset {
 }
 .footer {
     text-align: center;
-    margin: 153px;
+    margin-top: 153px;
     text-shadow: 0.125pc 0.125pc 0.625pc black;
+    
 }
 .card-text {
     text-align: center;
     font-weight: bold;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 12px;
+    padding-left: 12px;
 }
 .loading {
     color : white;
