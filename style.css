@@ -4,12 +4,11 @@ body {
     background-repeat : no-repeat;
     background-position: center;
     height: 100vh;
-    margin:0;
-    padding:0;
     background-attachment: fixed;
-    
+    overflow: hidden; /* Hide scrollbars */
     
 }
+
 
 .titles {
     margin-top:10px;
@@ -25,19 +24,23 @@ fieldset {
 }
 #container {
     display: none;
-    margin: -100px;
+    margin: -148px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .header {
     text-align: center;
 }
 .footer {
     text-align: center;
-    margin: 100px;
+    margin: 153px;
     text-shadow: 0.125pc 0.125pc 0.625pc black;
 }
 .card-text {
     text-align: center;
     font-weight: bold;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 .loading {
     color : white;
